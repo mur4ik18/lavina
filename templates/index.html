@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- end slider -->
+
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link rel="stylesheet" href="/static/style/style.css">
 </head>
@@ -121,10 +127,29 @@
             <a href="#" class="contactUs">Связаться с нами</a>
         </div>
     </section>
-    <section class='full' id='section_5'></section>
+    <section class='full' id='section_5'>
+        <h3 class="title">{{menu[4]}}</h3>
+
+        <div class="slider">
+            {% for m in range(1,18) %}
+                <img src="static/sliderImages/{{m}}.jpg" alt="">            
+            {% endfor %}
+        </div>
+    </section>
     <section class='full' id='section_6'>
         <div class="content column">
             <h3 class="title">{{menu[4]}}</h3>
+            <h4>
+                <a href="tel:+380501300297">+3 8(050) 130 02 97</a><br>
+                
+                ooolavina@ukr.net
+            </h4>
+            <p>
+                ООО "ЛАВИНА"<br>
+                84200, Донецкая обл.,<br>
+                г. Дружковка,<br>
+                ул. Космонавтов, 56
+            </p>
         </div>
     </section>
     <section class="full" id="section_7">
@@ -158,6 +183,10 @@
 
 
     
-    <!-- <script src="/js/script.js"></script> -->
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
